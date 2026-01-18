@@ -1,0 +1,33 @@
+@K.thread:knots_structure {
+
+  @K.knot:thread_definition {
+    rule_1 = "A KNOTS file MAY contain one or more @K.thread blocks"
+    rule_2 = "Each @K.thread represents an independent root scope"
+    rule_3 = "Each @K.thread name MUST be unique within the file"
+  }
+
+  @K.knot:knot_definition {
+    rule_1 = "Only @K.knot blocks are allowed inside a @K.thread"
+    rule_2 = "Every @K.knot MUST have a name"
+    rule_3 = "Every @K.knot name MUST be globally unique across the entire file"
+  }
+
+  @K.knot:nesting {
+    rule_1 = "A @K.knot MAY contain other @K.knot blocks"
+    rule_2 = "Nested @K.knot blocks MAY be infinitely deep"
+    rule_3 = "A @K.thread MUST NOT appear inside any @K.knot"
+  }
+
+  @K.knot:scope {
+    rule_1 = "Curly braces {} define structural scope"
+    rule_2 = "Every opening brace MUST have a matching closing brace"
+    rule_3 = "A knot's scope is limited strictly to its braces"
+  }
+
+  @K.knot:hierarchy {
+    rule_1 = "Each @K.knot belongs to exactly one parent scope"
+    rule_2 = "A parent scope MAY be a @K.thread or another @K.knot"
+    rule_3 = "A knot MUST NOT have multiple parents"
+  }
+
+}

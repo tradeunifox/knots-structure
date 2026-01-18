@@ -1,0 +1,21 @@
+@K.thread:user_data {
+
+  @K.knot:profile {
+  }
+
+  @K.knot:settings {
+  }
+
+}
+
+@K.thread:system_data {
+
+  @K.knot:permissions {
+  }
+
+  @K.knot:logs {
+    @K.knot:entry {
+    }
+  }
+
+}
